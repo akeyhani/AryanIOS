@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct AryanIOSApp: App {
+    @StateObject private var watchlist = WatchlistStore()
     var body: some Scene {
         WindowGroup {
             EntryView()
+                .environmentObject(watchlist)
         }
     }
 }
